@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.ii.placeholder</id>
+    <name>Place holder test</name>
+    <version>1.0</version>
+    <icon>appicon.png</icon>
+	<persistent-wifi>false</persistent-wifi>
+	<prerendered-icon>false</prerendered-icon>
+	<statusbar-style>opaque</statusbar-style>
+    <windows>
+        <window>
+            <id>initial</id>
+            <url>index.html</url>
+            <backgroundColor>#111</backgroundColor>
+            <title>Placeholder</title>
+			<barColor>#000</barColor>
+			<fullscreen>false</fullscreen>
+        </window>
+        <window>
+            <id>about</id>
+            <url>about.html</url>
+            <backgroundColor>#111</backgroundColor>
+            <title>No Placeholder</title>
+            <barColor>#000</barColor>
+			<fullscreen>false</fullscreen>
+        </window>
+    </windows>
+<guid>7db8195c6a7a4cfeadfb8155254c9a91</guid>
+</ti:app>

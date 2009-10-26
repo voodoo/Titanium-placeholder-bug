@@ -1,0 +1,75 @@
+/**
+ * Appcelerator Titanium Mobile
+ * This is generated code. Do not modify. Your changes will be lost.
+ * Generated code is Copyright (c) 2009 by Appcelerator, Inc.
+ * All Rights Reserved.
+ */
+#import <Foundation/Foundation.h>
+#import "ApplicationRouting.h"
+
+extern NSData * decode64(NSData * data);
+extern NSData * dataWithHexString(NSString * hexString);
+extern NSData * AES128DecryptWithKey(NSData * data, NSString * key);
+
+@implementation ApplicationRouting
+
+-(oneway void)release
+{
+	[super release];
+}
+
+-(id)retain
+{
+	return [super retain];
+}
+
+- (NSData*) resolveAppAsset:(NSURL*)url;
+{
+   NSString *urlStr = [url absoluteString];
+
+   if ([urlStr isEqualToString:[NSString stringWithFormat:@"app%s//%@/%@",":",@"com.ii.placeholder",@"about.html"]]){
+     return [self pageNamedAbout];
+   }
+   else if ([urlStr isEqualToString:[NSString stringWithFormat:@"app%s//%@/%@",":",@"com.ii.placeholder",@"index.css"]]){
+     return [self styleNamedIndex];
+   }
+   else if ([urlStr isEqualToString:[NSString stringWithFormat:@"app%s//%@/%@",":",@"com.ii.placeholder",@"index.html"]]){
+     return [self pageNamedIndex];
+   }
+   else if ([urlStr isEqualToString:[NSString stringWithFormat:@"app%s//%@/%@",":",@"com.ii.placeholder",@"index.js"]]){
+     return [self scriptNamedIndex];
+   }
+   else {
+     return nil;
+   }
+}
+
+	- (NSData*) pageNamedAbout;
+	{
+		NSData *d = dataWithHexString(@"3c21444f43545950452068746d6c3e0a0a3c68746d6c3e0a3c686561643e0a093c7469746c653e4e6f20506c616365686f6c6465723c2f7469746c653e0a3c2f686561643e0a3c626f64793e0a20203c696e70757420747970653d2274657874223e0a3c2f626f64793e0a3c2f68746d6c3e0a");
+	   	if ([d length] == 0) return nil;
+		return d;
+	}
+			
+	- (NSData*) styleNamedIndex;
+	{
+		NSData *d = dataWithHexString(@"626f64797b6261636b67726f756e642d636f6c6f723a233131313b636f6c6f723a236262623b666f6e742d66616d696c793a73616e732d73657269667d68312c68327b636f6c6f723a233930307d707b6d617267696e2d626f74746f6d3a323070787d");
+	   	if ([d length] == 0) return nil;
+		return d;
+	}
+			
+	- (NSData*) pageNamedIndex;
+	{
+		NSData *d = dataWithHexString(@"3c21444f43545950452068746d6c3e0a0a3c68746d6c3e0a3c686561643e0a093c7469746c653e506c616365686f6c6465723c2f7469746c653e0a3c2f686561643e0a3c626f64793e0a20203c696e70757420747970653d22746578742220706c616365686f6c6465723d225573696e6720706c616365686f6c646572223e0a3c2f626f64793e0a3c2f68746d6c3e");
+	   	if ([d length] == 0) return nil;
+		return d;
+	}
+			
+	- (NSData*) scriptNamedIndex;
+	{
+		NSData *d = dataWithHexString(@"0a7472790a7b0a77696e646f772e6f6e6c6f6164203d2066756e6374696f6e28290a7b0a09646f63756d656e742e676574456c656d656e7442794964282776657273696f6e27292e696e6e657248544d4c203d20546974616e69756d2e76657273696f6e3b0a09646f63756d656e742e676574456c656d656e7442794964282770686f6e6527292e696e6e657248544d4c203d20546974616e69756d2e506c6174666f726d2e6e616d65202b202720272b546974616e69756d2e506c6174666f726d2e76657273696f6e3b0a09646f63756d656e742e676574456c656d656e744279496428276227292e6f6e636c69636b203d2066756e6374696f6e2829207b20546974616e69756d2e4d656469612e7669627261746528293b207d3b0a0a09546974616e69756d2e476573747572652e6164644576656e744c697374656e657228277368616b65272c66756e6374696f6e28297b0a090976617220616c65727479203d20546974616e69756d2e55492e637265617465416c6572744469616c6f6728293b0a0909616c657274792e7365745469746c6528224e6f7420737469727265642122293b0a0909616c657274792e73686f7728293b0a097d2c66616c7365293b0a090a7d3b0a0a7d0a6361746368285f5f65785f5f290a7b0a202069662028747970656f66205f5f65785f5f203d3d2027737472696e6727290a20207b0a2020202020766172206d7367203d205f5f65785f5f0a20202020205f5f65785f5f203d207b6c696e653a332c736f7572636555524c3a276170703a2f2f636f6d2e69692e706c616365686f6c6465722f696e6465782e6a73272c6d6573736167653a6d73677d3b0a20207d0a2020766172205f737572203d205f5f65785f5f2e736f7572636555524c3b0a2020696620285f737572290a20207b0a202020205f737572203d205f7375722e737562737472696e67283235293b0a20207d0a2020546974616e69756d2e4150492e7265706f7274556e68616e646c6564457863657074696f6e285f5f65785f5f2e6c696e652d332c5f7375722c5f5f65785f5f2e6d657373616765293b0a7d0a");
+	   	if ([d length] == 0) return nil;
+		return d;
+	}
+			
+@end
